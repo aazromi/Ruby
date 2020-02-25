@@ -1,0 +1,21 @@
+=========VARIABLE==========
+ada 4 jenis variable :
+a. lokal variable (a-z or _) => variable yang bisa hanya di satu method
+b. instance variable (@) => variable yang diakses oleh berbagai method di dalam class yang sama
+c. clas variable (@@) => variable yang diakses oleh berbagai object yang di instansikan dari class yang sama
+d. global variable ($) => variabel yang diakses oleh seluruh object dan seluruh kelas
+
+=========SETTER============
+method SETTER yaitu method yang berfungsi untuk mengeset atau mengubah nilai dari parameter sebulah object
+
+=========MODULE============
+Module merupakan kumpulan dari class,method dan constant
+
+=========TERMINAL==========
+1. ls           : List untuk melihat posisi kita di folder mana
+2. cd           : ChangeDirectory masuk ke directory(folder) yang di tuju
+3. cd ..        : ChangeDirectory .. keluar dari directory (folder) yang di tuju
+4. mkdir        : Buat folde baru
+5. touch        : Buat file baru
+6. nano         : membuka file baru
+7. ruby __ rb.rb   : menjalankan/run file ruby bernama __.rb
