@@ -1,0 +1,113 @@
+body{
+    background-color: aqua;
+}
+
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.symbol{
+    height: 20px;
+    width: 20px;
+    background: green;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.card > .symbol{
+    background: red;
+}
+
+/* .card::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    display: block;
+} */
+/* 
+.card::after{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    display: block;
+} */
+
+.segitiga{
+    border-width: 50px;
+    border-color: transparent transparent rgb(255, 33, 107) transparent;
+    border-style: solid;
+    width: 0px;
+}
+
+.segitiga::before{
+    content: '';
+    border-width: 57px;
+    border-color: transparent transparent black transparent;
+    border-style: solid;
+    width: 0px;
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: 2px;
+}
+
+.forflex{
+    display: flex; /* buat ke samping , kalo block ke bawah, flex sangat kuat*/ 
+    width: 50%;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-self: flex-start;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: hotpink;
+    grid-area: head;
+}
+
+.sidebar{
+    width: 100px;
+    height: 100vh;
+    background-color: blueviolet;
+    grid-area: side;
+}
+
+.content{
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: beige;
+    grid-area: content;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forgrid{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "head head" "side content";
+}
+
+@media screen and (max-width: 1000px){
+    .forgrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px auto 100px;
+        grid-template-areas: "head" "content" "side";
+    }
+    .sidebar{
+        width: 100%;
+        height: 50px;
+    }
+    .content{
+        width: 100%;
+        height: calc(100vh - 150px);
+    }
+}
