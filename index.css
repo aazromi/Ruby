@@ -8,6 +8,8 @@ body{
     background-color: red;
     border-radius: 10px;
     border: 1px solid black;
+    margin: 5px;
+    animation: mymove 5s infinite;
 }
 
 .symbol{
@@ -70,6 +72,7 @@ body{
     height: 100px;
     background-color: hotpink;
     grid-area: head;
+    position: fixed;
 }
 
 .sidebar{
@@ -77,6 +80,7 @@ body{
     height: 100vh;
     background-color: blueviolet;
     grid-area: side;
+    position: fixed;
 }
 
 .content{
@@ -86,6 +90,22 @@ body{
     grid-area: content;
     display: flex;
     justify-content: space-evenly;
+}
+
+.card-group .card:first{
+    background-color: chartreuse;
+}
+
+.card:first-of-type{
+    background-color: coral;
+}
+
+@keyframes mymove{
+    0% {background-color: blueviolet;}
+    25% {background-color: hotpink;}
+    50% {background-color: cyan;}
+    100% {background-color: chartreuse;}
+
 }
 
 .forgrid{
